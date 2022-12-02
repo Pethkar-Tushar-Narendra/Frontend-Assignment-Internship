@@ -1,0 +1,167 @@
+li {
+  list-style: none;
+}
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid var(--clr-para);
+  background-color: var(--clr-primary);
+  height: 5rem;
+  z-index: 10;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+.logo,
+.toggle {
+  cursor: pointer;
+}
+.logo h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+.logo h3 .icon {
+  color: var(--clr-bold);
+}
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  height: 2.5rem;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.toggle .icon2 {
+  display: none;
+}
+.toggle:hover,
+.toggle.active {
+  background-color: var(--bg-primary);
+}
+.toggle.active .icon1 {
+  display: none;
+}
+.toggle.active .icon2 {
+  display: flex;
+}
+.menu {
+  display: none;
+}
+.menu.active {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-para);
+  cursor: default;
+  gap: 2em;
+  font-size: 1.5rem;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-para);
+  cursor: default;
+  gap: 1em;
+}
+li {
+  border-radius: 0.3em;
+}
+li:hover {
+  background-color: var(--bg-primary);
+  cursor: pointer;
+  padding: 0.5em 1rem;
+}
+a {
+  color: #000;
+}
+li:hover a {
+  color: var(--clr-bold);
+}
+a h5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a h5 .icon {
+  font-size: 3rem;
+}
+.Buttons {
+  display: flex;
+  gap: 1em;
+}
+.Buttons .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2em 0.5em;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+.Buttons .btn:hover {
+  background-color: var(--bg-primary);
+}
+.Buttons .btn.btn-login {
+  border: 0.1rem solid var(--clr-bold);
+  color: var(--clr-bold);
+}
+.Buttons .btn.btn-signup {
+  background-color: var(--clr-bold);
+  color: var(--clr-primary);
+}
+@media (min-width: 60em) {
+  .toggle {
+    display: none;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    width: 100%;
+    padding-left: 2rem;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--clr-primary);
+    gap: 0.3rem;
+  }
+  li {
+    padding: 0.5em 0.5rem;
+    border-radius: 0.3em;
+  }
+  a h5 .icon {
+    font-size: 1.5rem;
+  }
+  .Buttons .btn {
+    padding: 0.5em 1em;
+    border-radius: 0.4em;
+  }
+  .Buttons .btn.btn-login {
+    border: 0.15rem solid var(--clr-para);
+  }
+}
