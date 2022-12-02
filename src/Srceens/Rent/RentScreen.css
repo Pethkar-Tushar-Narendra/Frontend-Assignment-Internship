@@ -140,6 +140,8 @@ section {
     padding-right: 1em;
     padding-bottom: 0em;
   }
+}
+@media (min-width: 82em) {
   .card-container {
     justify-content: space-between;
   }

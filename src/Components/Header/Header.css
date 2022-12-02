@@ -18,7 +18,7 @@ header {
   justify-content: space-between;
   width: 90%;
 }
-.logo,
+.logo h3,
 .toggle {
   cursor: pointer;
 }
