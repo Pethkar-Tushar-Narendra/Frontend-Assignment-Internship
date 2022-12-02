@@ -66,9 +66,9 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--clr-para);
+  background-color: var(--bg-primary);
   cursor: default;
-  gap: 2em;
+  gap: 2rem;
   font-size: 1.5rem;
 }
 ul {
@@ -76,9 +76,8 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--clr-para);
   cursor: default;
-  gap: 1em;
+  gap: 1rem;
 }
 li {
   border-radius: 0.3em;
@@ -86,7 +85,6 @@ li {
 li:hover {
   background-color: var(--bg-primary);
   cursor: pointer;
-  padding: 0.5em 1rem;
 }
 a {
   color: #000;
@@ -104,7 +102,7 @@ a h5 .icon {
 }
 .Buttons {
   display: flex;
-  gap: 1em;
+  gap: 1rem;
 }
 .Buttons .btn {
   display: flex;
@@ -118,7 +116,7 @@ a h5 .icon {
   background-color: var(--bg-primary);
 }
 .Buttons .btn.btn-login {
-  border: 0.1rem solid var(--clr-bold);
+  border: 0.15rem solid var(--clr-para);
   color: var(--clr-bold);
 }
 .Buttons .btn.btn-signup {
@@ -160,8 +158,5 @@ a h5 .icon {
   .Buttons .btn {
     padding: 0.5em 1em;
     border-radius: 0.4em;
-  }
-  .Buttons .btn.btn-login {
-    border: 0.15rem solid var(--clr-para);
   }
 }
