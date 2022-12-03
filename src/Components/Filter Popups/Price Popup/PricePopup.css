@@ -1,0 +1,36 @@
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.popup-container .label {
+  display: flex;
+  font-size: 1rem;
+}
+
+.popup-container .row {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid var(--clr-para);
+  width: 100%;
+  padding: 0.2em 0.2em;
+  cursor: pointer;
+}
+.popup-container .row:last-child {
+  border: none;
+}
+.popup-container .row input {
+  width: 80%;
+  text-align: center;
+  height: 2rem;
+  font-weight: 400;
+  background-color: var(--bg-primary);
+  border: none;
+  border-radius: 0.51rem;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+}

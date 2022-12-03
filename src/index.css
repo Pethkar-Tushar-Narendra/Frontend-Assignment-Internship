@@ -12,6 +12,7 @@ body {
   background-color: var(--bg-primary);
   user-select: none;
   min-height: 100vh;
+  position: relative;
 }
 
 code {
@@ -44,7 +45,7 @@ a {
 }
 p {
   color: var(--clr-para);
-  font-weight: 300;
+  font-weight: 500;
 }
 h1 {
   font-size: 2rem;
