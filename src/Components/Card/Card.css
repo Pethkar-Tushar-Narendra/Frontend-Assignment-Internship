@@ -5,4 +5,126 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.cardContainer .row1 {
+  width: 100%;
+  height: 45%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.cardContainer .row1 img {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.cardContainer .row1 img:hover {
+  background-size: contain;
+}
+.cardContainer .row2 {
+  padding: 1rem;
+  width: 100%;
+  height: 55%;
+}
+.cardContainer .row2 .col1 {
+  height: 80%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  border-bottom: 0.1rem solid var(--clr-para);
+}
+.cardContainer .row2 .col1 .price p {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.cardContainer .row2 .col1 .price p h2,
+.cardContainer .row2 .col2 .utility .icon,
+.cardContainer .row2 .col1 .like .icon {
+  color: var(--clr-bold);
+}
+.cardContainer .row2 .col1 .like:hover {
+  background-color: var(--clr-bold);
+}
+.cardContainer .row2 .col1 .like:hover .icon {
+  color: var(--clr-primary);
+  font-size: 1.6rem;
+}
+.cardContainer .row2 .col1 .like {
+  border: 0.1rem solid var(--clr-para);
+  border-radius: 50%;
+  height: 2.5rem;
+  aspect-ratio: 1;
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  transform: translate(20%, -40%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.cardContainer .row2 .col2 {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cardContainer .row2 .col2 .utility {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.2rem;
+}
+
+.cardContainer .ribbon {
+  position: absolute;
+  height: 10%;
+  width: 50%;
+  top: 39%;
+  left: -5%;
+  border-radius: 1.2rem;
+  background-color: var(--clr-bold);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardContainer .ribbon::before {
+  content: '';
+  position: absolute;
+  height: 60%;
+  width: 10%;
+  top: 100%;
+  left: 0;
+  background-color: rgb(142, 147, 207);
+  border-bottom-left-radius: 1.3rem;
+  border-top-left-radius: 1.3rem;
+  z-index: 2;
+}
+.cardContainer .ribbon::after {
+  content: '';
+  position: absolute;
+  height: 80%;
+  width: 10%;
+  top: 50%;
+  left: 0;
+  background-color: var(--clr-bold);
+}
+.cardContainer .ribbon p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-primary);
+  gap: 0.5rem;
 }

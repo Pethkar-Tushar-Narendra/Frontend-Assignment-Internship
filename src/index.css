@@ -46,6 +46,7 @@ a {
 p {
   color: var(--clr-para);
   font-weight: 500;
+  font-size: 0.95rem;
 }
 h1 {
   font-size: 2rem;
