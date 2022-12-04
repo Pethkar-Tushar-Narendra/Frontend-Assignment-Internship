@@ -18,16 +18,13 @@ const Card = ({ card }) => {
         </p>
       </div>
       <div className="row1">
-        <img />
+        <img src={card.image} alt="No image found" />
       </div>
       <div className="row2">
         <div className="col1">
           <div className="price">
-            <p>
-              {' '}
-              <h2>${card.price}</h2>
-              <sub>/month</sub>
-            </p>
+            <h2>&#8377;{card.price}</h2>
+            <p>/month</p>
           </div>
           <h2>{card.name}</h2>
           <p>{card.address}</p>

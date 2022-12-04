@@ -1,6 +1,5 @@
 section {
   padding: 7.5rem 0;
-  padding-bottom: 3rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -183,9 +182,10 @@ section {
   top: 110%;
   left: 50%;
   transform: translate(-50%, 0);
-  padding: 1rem;
+  padding: 0.7rem;
   z-index: 9;
   border-radius: 0.4rem;
+  font-size: 1rem;
 }
 .search-container .box h4 .datepicker1 {
   height: 2rem;

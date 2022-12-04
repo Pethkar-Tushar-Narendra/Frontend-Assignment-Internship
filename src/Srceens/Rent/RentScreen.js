@@ -17,7 +17,7 @@ const RentScreen = () => {
   const [location, setLocation] = useState('');
   const [date, setDate] = useState(new Date());
   const [minPrice, setMinPrice] = useState(0);
-  const [maxPrice, setMaxPrice] = useState(9999);
+  const [maxPrice, setMaxPrice] = useState(99999);
   const [propertyType, setPropertyType] = useState('');
   const [filterObj, setFilterObj] = useState({
     location,
@@ -50,6 +50,7 @@ const RentScreen = () => {
   };
   const cardsInPage = 6;
   const [pageNo, setPageNo] = useState(1);
+  var tempArray = [];
   return (
     <section>
       <div className="rent-container">
@@ -104,7 +105,7 @@ const RentScreen = () => {
           <div className="box">
             <p>Price</p>
             <h4 onClick={priceToggle}>
-              ${minPrice}-${maxPrice}{' '}
+              &#8377;{minPrice}-&#8377;{maxPrice}{' '}
               <div className="icon">
                 {priceIsOpen ? <GrFormClose /> : <RiArrowDropDownLine />}
               </div>
@@ -148,6 +149,7 @@ const RentScreen = () => {
             <div
               className="btn"
               onClick={() => {
+                setPageNo(1);
                 setFilterObj({
                   location,
                   date,
@@ -165,8 +167,6 @@ const RentScreen = () => {
           {cards
             .filter(
               (card, i) =>
-                i >= (pageNo - 1) * cardsInPage &&
-                i < pageNo * cardsInPage &&
                 card.type
                   .toUpperCase()
                   .includes(filterObj.propertyType.toUpperCase()) &&
@@ -176,6 +176,15 @@ const RentScreen = () => {
                   .toUpperCase()
                   .includes(filterObj.location.toUpperCase()) &&
                 card.date.getTime() >= filterObj.date.getTime()
+            )
+            .sort((a, b) => (b.popular ? 1 : -1))
+            .map((card, i) => {
+              tempArray.push(card);
+            })}
+          {tempArray
+            .filter(
+              (card, i) =>
+                i >= (pageNo - 1) * cardsInPage && i < pageNo * cardsInPage
             )
             .map((card, i) => (
               <div className="card" key={i}>
@@ -197,7 +206,7 @@ const RentScreen = () => {
           <div
             className="btn"
             onClick={() => {
-              if (pageNo < Math.ceil(cards.length / cardsInPage))
+              if (pageNo < Math.ceil(tempArray.length / cardsInPage))
                 setPageNo(pageNo + 1);
             }}
           >

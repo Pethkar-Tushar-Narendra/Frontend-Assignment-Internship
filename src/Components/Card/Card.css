@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 .cardContainer .row1 {
   width: 100%;
@@ -20,11 +21,10 @@
   width: 100%;
   background-position: center;
   background-size: cover;
-  cursor: pointer;
 }
-.cardContainer .row1 img:hover {
+/* .cardContainer .row1:hover img {
   background-size: contain;
-}
+} */
 .cardContainer .row2 {
   padding: 1rem;
   width: 100%;
@@ -40,13 +40,16 @@
   justify-content: space-evenly;
   border-bottom: 0.1rem solid var(--clr-para);
 }
-.cardContainer .row2 .col1 .price p {
+.cardContainer .row2 .col1 .price {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-start;
 }
-.cardContainer .row2 .col1 .price p h2,
+.cardContainer .row2 .col1 .price p {
+  padding-bottom: 0.5rem;
+}
+.cardContainer .row2 .col1 .price h2,
 .cardContainer .row2 .col2 .utility .icon,
 .cardContainer .row2 .col1 .like .icon {
   color: var(--clr-bold);
@@ -90,7 +93,7 @@
 .cardContainer .ribbon {
   position: absolute;
   height: 10%;
-  width: 50%;
+  width: 40%;
   top: 39%;
   left: -5%;
   border-radius: 1.2rem;
@@ -104,7 +107,7 @@
   content: '';
   position: absolute;
   height: 60%;
-  width: 10%;
+  width: 12%;
   top: 100%;
   left: 0;
   background-color: rgb(142, 147, 207);
@@ -116,7 +119,7 @@
   content: '';
   position: absolute;
   height: 80%;
-  width: 10%;
+  width: 12%;
   top: 50%;
   left: 0;
   background-color: var(--clr-bold);

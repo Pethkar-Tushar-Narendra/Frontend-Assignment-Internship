@@ -31,7 +31,7 @@ const PricePopup = ({
           max="9999"
           value={maxPrice}
           onChange={(e) => {
-            if (e.target.value > minPrice && e.target.value <= 9999)
+            if (e.target.value > minPrice && e.target.value <= 99999)
               setMaxPrice(e.target.value);
           }}
         ></input>

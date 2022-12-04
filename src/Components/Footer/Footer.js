@@ -6,7 +6,11 @@ const Footer = () => {
       <div className="footer-container">
         <h5>
           Copyright 2022 &#174;{' '}
-          <a href="#" target="_blank" style={{ textDecoration: 'underline' }}>
+          <a
+            href="https://tushar-pethkar-portfolio.netlify.app/"
+            target="_blank"
+            style={{ textDecoration: 'underline' }}
+          >
             Contact Me
           </a>
         </h5>
