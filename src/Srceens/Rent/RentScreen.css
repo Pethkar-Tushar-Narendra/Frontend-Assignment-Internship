@@ -216,4 +216,7 @@ section {
     padding-right: 1em;
     padding-bottom: 0em;
   }
+  .search-container .box h4 .icon.datepicker {
+    right: 20%;
+  }
 }
