@@ -300,7 +300,7 @@ const cards = [
     date: new Date(2023, 0, 22),
     price: 90000,
     type: 'Villa',
-    address: '2699,Red Valley,Mumbai,MH',
+    address: '2699,Red Valley,Pune, MH',
     beds: 5,
     bathroom: 2,
     length: 5,
